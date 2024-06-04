@@ -1,143 +1,514 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+*{ 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root {
+    --Primary-Orange:hsl(26, 100%, 55%);
+    --Primary-Pale-orange: hsla(25, 100%, 94%, 0.6);
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+     
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Black-for-lightbox-background: hsla(0, 0%, 0%, 0.75);
+    
+    
+    --fs-200:0.85rem;
+    --fs-300: 1rem;
+    --fs-400: 1.5rem;
+    --fs-500:2rem;
+    --font-family: "Kumbh Sans", sans-serif;
+}
 
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+body{
+width: 100%;
+height: 100vh;
+padding-left: 10%;
+padding-top: 3%;
+padding-right:10%;
+margin: auto;
 
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
+font-family: var(--font-family);
+font-size: var(--fs-300);
+}
 
-    <nav class="nav">
-      <div class="dropdown">
-        <li>
-          <div class="close"  onclick="closem()"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg></div>
-          <ul class="mobiledropdown">Collections </ul>
-          <ul class="mobiledropdown">Men</ul>
-          <ul class="mobiledropdown">Women </ul>
-          <ul class="mobiledropdown">About</ul>
-          <ul class="mobiledropdown">Contact</ul>
-        </li>
-      </div>
-      <div class="mobileleftdiv">
-        <li>
-          <ul class="menumobile" onclick="displaymanybar()">
-            <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
-          </ul>
-          <ul class="snakermobile">
-            <B>sneaker</B>
-          </ul>
-         
-        </li>
-      </div>
-      <div class="navleft">
-          
-         <li>
-          <ul class="navlisneaker">
-           <B>sneaker</B>
-          </ul>
-          <ul class="">  Collections
-          </ul>
-          <ul class="">  Men
-            </ul>
-          <ul class="">Women
-            </ul>
-          <ul class="">About
-          </ul>
-          <ul class="">  Contact
+@media only screen and (min-width: 950px){
+   .mobileleftdiv{
+    display: none;
+   }
+   .dropdown{
+    display: none;
+   }
+   .animation{
+    display: none;
+   }
+}
+.nav{
+padding-left: 4%;
+padding-right: 4%;
+ list-style-type: none;
+ display: flex;
+ margin: center;
+ justify-content: space-between;
+ 
+}
+li ul {
+    display: inline;
+    color: var(--Dark-grayish-blue);
+    font-size: var(--fs-300);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+li .navlisneaker{
+    color: var(--Very-dark-blue);
+    font-size: var(--fs-400);
+    margin-right: 1.5rem ;
+    cursor: default;
+}
+.shpingcartandprofile{
 
-          </ul>
-         </li>
-         
-      </div>
-      <div class="shpingcartandprofile">
-           <div class="svg">
-              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
-           </div>
-            <div class="profile">
-              <img src="images/image-avatar.png" alt="">
-           </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-      <div class="continer">
-        <div class="shoes">
-          <!-- <div class="scrollerl"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
-          <div class="scrollerr"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div> -->
-          <div class="bigimage">
-            <img src="images/image-product-1.jpg" alt="">
-          </div>
-          <div class="fourdivs">
-              <div class="smallimage1">
-                <img src="images/image-product-1.jpg" alt="">
-              </div>
-              <div class="smallimage2">
-                <img src="images/image-product-2.jpg" alt="">
-              </div>
-              <div class="smallimage3">
-                <img src="images/image-product-3.jpg" alt="">
-              </div>
-              <div class="smallimage4">
-                <img src="images/image-product-4.jpg" alt="">
-              </div>
-          </div>
-        </div>
-        <div class="descripitions">
-          <P class="sneakercomp">
-            sneaker company
-          </P>
-          <p class="secounfd"><b>Fall Limited Edition Sneakers</b></p>
-          <p class="long">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-            durable rubber outer sole, they’ll withstand everything the weather can offer.
-          </p>
-          <div class="numbers">
-            <div class="upper"> <b>$125.00</b> <span class="span">50%</span> </div>
-            <p class="underline">$250.00</p>
-          </div>
-          <div class="cart">
-            <div class="addingandsubstaracting">
-              <img class="mius" onclick="miusone()" src="images/icon-minus.svg" alt="">
-              <p class="addonemiusone">0</p>
-              <img class="plus" onclick="addone()" src="images/icon-plus.svg" alt="">
-            </div>
-            <div class="tocart" >
-              <div><img src="images/icon-cart.svg" alt=""></div>
-              <p class="paddtocart">Add to cart</p></div>
-            </div>
-        </div>
-      </div>
-      <!-- --Light-grayish-blue: hsl(223, 64%, 98%);
+   
+   display: flex;
+   flex-direction:row;
+}
+.profile{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border-radius: 20px;
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+}
+.svg {
+    margin: auto;
+    margin-right:2rem ;
+    cursor: pointer;
+}
+.snakermobile{
+    color: var(--Very-dark-blue);
+    font-size: var(--fs-400);
+ 
+    cursor:default;
 
+}
+.continer{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+   
+    padding-top: 5%;
+    height: 80vh;
+    max-width: 900px;
+    margin: auto;
+}
+
+.shoes{
+ 
+   overflow: hidden;
+}
+.bigimage {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+.bigimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+   
+
+}
+.fourdivs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10%;
+    padding-top: 2%;
+}
+.fourdivs div{
+    width: 18%;
+    height: 18%;
+}
+.fourdivs img{
+ width: 100%;
+ height: 100%;
+ border-radius: 10%;
+}
+.descripitions{
+    padding-left: 20%;
+    margin: auto;
+}
+.sneakercomp{
+    font-size: var(--fs-200);
+    color: var(--Very-dark-blue);
+    margin: var(--fs-400);
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.secounfd{
+    color: var(--Very-dark-blue);
+    margin: var(--fs-300);
+    font-size: var(--fs-500);
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.long{
+    font-size: var(--fs-200);
+    color: var(--Very-dark-blue);
+    margin: var(--fs-400);
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.upper{
+    font-size: var(--fs-400);
+    font-weight: 400;
+}
+.span{
+    background-color: var(--Black) ;
+    font-size: var(--fs-200);
+    color: var(--White);
+    margin: auto;
+    padding-left: 0.56rem;
+    padding-right: 0.56rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0.5rem;
+}
+.underline{
+    text-decoration:line-through;
+    font-size: var(--fs-200);
+}
+.cart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.addingandsubstaracting{
+    margin-top: var(--fs-200);
+    margin-bottom: var(--fs-200);
+    display: grid;
+    padding-top: 0.2%;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-bottom: 0.5rem;
+    box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.043);
+    
+}
+
+.addingandsubstaracting img{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.addingandsubstaracting p {
+   text-align: center;
+}
+.tocart{
+    background-color: rgb(252, 109, 6);
+    display: flex;
+    grid-template-columns:  1fr 10fr;
+    margin: auto;
+    padding-left:var(--fs-500) ;
+    padding-right:var(--fs-500) ;
+    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+   
+    
+
+}
+
+.tocart p{
+   font-size: var(--fs-200);
+   font-weight: 500;
+}
+.tocart div{
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}  
+.tocart img{
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+.addingandsubstaracting img{
+   cursor: pointer;
+   padding: 20%;}
+   .addingandsubstaracting p {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+.tocart:hover{
+background-color: rgb(245, 158, 96) ;
+transition-duration: 0.5s;
+}
+@media only screen and (max-width: 949px){
+    body{
+       padding: 0%;
+    }
+    nav{
+        width: 100%;
+        padding: 0%;
+        height: 40%;
+       padding-top: 2%;
+    }
+    .navleft{
+        display: none;
+        padding: 0%;
+       }
+    .continer{
+     display:grid ;
+     height: 100vh;
+     width: 100%;
+     grid-template-columns: none;
+     grid-auto-flow: row;
+     gap: 0%;
+     padding-top: 1%;
+     margin: 0% ;
+    }
+    .shoes{
+        width: 100%;
+     
+        position: relative;
+    }
+    .shoes .bigimage{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
       
-    
-      These low-profile sneakers are your perfect casual wear companion. Featuring a 
-      durable rubber outer sole, they’ll withstand everything the weather can offer.
-    
-  
-      $250.00
-    
-      0
-      Add to cart
+    }
+    .fourdivs{
+        width: 100vw;
+        height: 50vh;
+        background-color: chartreuse;
+        display: block;
+        margin: 0%;
+        padding: 0%;
+        display: none;
+    }
+    .smallimage1{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
+    }
+    .smallimage2{
+        width: 100vw;
+        height: 50vh;
+        max-width: 600px;
+        background-color: burlywood;
+        display: none;
+       
+    }
+    .smallimage2 img{
+        width: 100%;
+        height: 100%;
+    }
+    .smallimage3{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
+    }
+    .smallimage4{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
+    }
+    .shoes .bigimage img{
+        border-radius: 0%;
+    }
+    .descripitions{
+     
+     padding: 0%;
+     margin: auto;
+     padding-left: 2%;
+     padding-right: 2%;
+     padding-bottom: 3%;
+    }
+    .descripitions .sneakercomp{
+        text-align: center;
+        margin: 0.5rem;
+        font-size: var(--fs-300);
+    }
+    .descripitions .secounfd{
+        text-align: center;
       
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </div> -->
-  </main>
+    }
+    .descripitions .upper{
+        text-align: center;
+       
+    }
+    .descripitions .long{
+        text-align: center;
+        font-size: var(--fs-300);
+        max-width: 600px;
+    }
+     .descripitions p{
+        text-align: center;
+        
+    }
+    .scrollerl{
+        z-index: 10;
+        position: absolute;
+        margin-top: 50%;
+    }
+    .dropdown{
+        background-color: #ffffffcf;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 32vh;
+        position: fixed;
+        z-index: 10;
+        max-width: 150px;
+        animation-name:  fade;
+        animation-duration: 0.5s;
+        
+    }
+    .dropdown li {
+        margin: auto;
+        margin-top: 10%;
+        margin-block-end: auto;
+        display: flex;
+        flex-direction: column;
+       
+
+    }
+    .dropdown ul {
+        display: block;
+        text-align: center;
+        font-size: var(--fs-300);
+        font-weight: 500;
+         margin-bottom: 10%;
+        color: var(--Black);
+        border-radius: 5%;
+        cursor: none;
+      
+    }
+    .dropdown ul:hover{
+        background-color: rgba(255, 136, 0, 0.267);
+        color: rgba(111, 45, 45, 0.858);
+    }
+    .dropdown div{
+        cursor: pointer;
+    }
+    @keyframes fade {
+        from{opacity: 0.5;}
+        to{opacity: 1;}
+    }
+    .preveous{
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.323);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
 
 
+    
+    .next{
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.323);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+       
+        
+    }
 
-  <script src="js.js"></script>
-</body>
-</html>
+   .animation{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+   }
+   .image1{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image2{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image3{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image4{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .preveous:hover{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.69);
+    transition-duration: 0.5s;
+    }
+    .next:hover{
+        background-color: rgb(244, 244, 244, 0.69);
+        transition-duration: 0.5s;
+    }
+}
+ 
+ 
+
+
+ 
