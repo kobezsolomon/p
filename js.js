@@ -1,14 +1,18 @@
 const dropdown = document.querySelector('.dropdown');
 const minus = document.querySelector('.mius');
 const plus = document.querySelector('.plus');
+const menubar = document.querySelector('.menumobile');
 let addonemiusone = document.querySelector('.addonemiusone').innerHTML;
 console.log(addonemiusone);
 dropdown.style.display="none"
 function closem() {
-    dropdown.style.display="none"
+    dropdown.style.display="none";
+    menubar.style.display="inline";
 }
 function displaymanybar() {
-    dropdown.style.display="flex"
+    dropdown.style.display="flex";
+    menubar.style.display="none";
+    
 }
 let stoerer = 0;
 function addone(){
