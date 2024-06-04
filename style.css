@@ -352,6 +352,7 @@ transition-duration: 0.5s;
          margin-bottom: 10%;
         color: var(--Black);
         border-radius: 5%;
+        cursor: none;
       
     }
     .dropdown ul:hover{
