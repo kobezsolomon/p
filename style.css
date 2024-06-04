@@ -40,6 +40,9 @@ font-size: var(--fs-300);
    .mobileleftdiv{
     display: none;
    }
+   .dropdown{
+    display: none;
+   }
 }
 .nav{
 padding-left: 4%;
@@ -274,7 +277,8 @@ transition-duration: 0.5s;
     }
     .shoes{
         width: 100%;
-        background-color: rgb(128, 128, 53);
+     
+        position: relative;
     }
     .shoes .bigimage{
         width: 100%;
@@ -314,7 +318,47 @@ transition-duration: 0.5s;
         text-align: center;
         
     }
-    
+    .scrollerl{
+        z-index: 10;
+        position: absolute;
+        margin-top: 50%;
+    }
+    .dropdown{
+        background-color: #ffffffcf;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 25vh;
+        position: fixed;
+        z-index: 10;
+        max-width: 150px;
+        
+    }
+    .dropdown li {
+        margin: auto;
+        margin-top: 10%;
+      margin-block-end: auto;
+
+    }
+    .dropdown ul {
+        display: block;
+        text-align: center;
+        font-size: var(--fs-300);
+        font-weight: 500;
+        color: var(--Black);
+        border-radius: 5%;
+      
+    }
+    .dropdown ul:hover{
+        background-color: rgba(255, 136, 0, 0.267);
+        color: rgba(111, 45, 45, 0.858);
+    }
+    .dropdown div{
+        cursor: pointer;
+    }
 }
+ 
+ 
+
 
  
