@@ -19,6 +19,16 @@
   <header>
 
     <nav class="nav">
+      <div class="dropdown">
+        <li>
+          <div class="close"  onclick="closem()"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg></div>
+          <ul class="mobiledropdown">Collections </ul>
+          <ul class="mobiledropdown">Men</ul>
+          <ul class="mobiledropdown">Women </ul>
+          <ul class="mobiledropdown">About</ul>
+          <ul class="mobiledropdown">Contact</ul>
+        </li>
+      </div>
       <div class="mobileleftdiv">
         <li>
           <ul class="menumobile" onclick="displaymanybar()">
@@ -63,6 +73,8 @@
   <main>
       <div class="continer">
         <div class="shoes">
+          <!-- <div class="scrollerl"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+          <div class="scrollerr"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div> -->
           <div class="bigimage">
             <img src="images/image-product-1.jpg" alt="">
           </div>
@@ -95,9 +107,9 @@
           </div>
           <div class="cart">
             <div class="addingandsubstaracting">
-              <img src="images/icon-minus.svg" alt="">
-              <p>0</p>
-              <img src="images/icon-plus.svg" alt="">
+              <img class="mius" onclick="miusone()" src="images/icon-minus.svg" alt="">
+              <p class="addonemiusone">0</p>
+              <img class="plus" onclick="addone()" src="images/icon-plus.svg" alt="">
             </div>
             <div class="tocart" >
               <div><img src="images/icon-cart.svg" alt=""></div>
