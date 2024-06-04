@@ -25,9 +25,13 @@ function addone(){
 }
 function miusone(){
  
-    stoerer--;
+    if(stoerer>=0){stoerer--}
+    else{stoerer=0};
     console.log(stoerer);
-    document.querySelector('.addonemiusone').innerHTML = stoerer
+    if(stoerer>=0){
+    document.querySelector('.addonemiusone').innerHTML = stoerer}
+    else {
+    document.querySelector('.addonemiusone').innerHTML = 0}
     
   
 }
