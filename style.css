@@ -239,7 +239,7 @@ li .navlisneaker{
         width: 100%;
         padding: 0%;
         height: 40%;
-        background-color: aqua;
+       padding-top: 2%;
     }
     .navleft{
         display: none;
@@ -248,19 +248,36 @@ li .navlisneaker{
     .continer{
      display:grid ;
      height: 100vh;
+     width: 100%;
      grid-template-columns: none;
      grid-auto-flow: row;
      gap: 0%;
      margin: 0% ;
     }
+    .shoes{
+        width: 100%;
+        background-color: rgb(128, 128, 53);
+    }
+    .shoes .bigimage{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+      
+    }
+    .shoes .bigimage img{
+        border-radius: 0%;
+    }
     .descripitions{
+
      padding: 0%;
      margin: auto;
      padding-left: 2%;
      padding-right: 2%;
+     padding-bottom: 3%;
     }
     .descripitions .sneakercomp{
         text-align: center;
+        margin: 0.5rem;
     }
     .descripitions .secounfd{
         text-align: center;
