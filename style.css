@@ -182,7 +182,8 @@ li .navlisneaker{
 }
 .cart{
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
 }
 
 .addingandsubstaracting{
@@ -207,10 +208,11 @@ li .navlisneaker{
 .tocart{
     background-color: rgb(252, 109, 6);
     display: flex;
-    grid-template-columns:  1fr 65fr;
+    grid-template-columns:  1fr 10fr;
     margin: auto;
     padding-left:var(--fs-500) ;
-    padding-right:var(--fs-500);
+    padding-right:var(--fs-500) ;
+    
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 0.5rem;
@@ -236,8 +238,12 @@ li .navlisneaker{
 }
 .addingandsubstaracting img{
    cursor: pointer;
-   padding: 20%;
-}
+   padding: 20%;}
+   .addingandsubstaracting p {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
 .tocart:hover{
 background-color: rgb(245, 158, 96) ;
 transition-duration: 0.5s;
