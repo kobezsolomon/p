@@ -269,6 +269,7 @@ transition-duration: 0.5s;
      grid-template-columns: none;
      grid-auto-flow: row;
      gap: 0%;
+     padding-top: 1%;
      margin: 0% ;
     }
     .shoes{
