@@ -43,6 +43,9 @@ font-size: var(--fs-300);
    .dropdown{
     display: none;
    }
+   .animation{
+    display: none;
+   }
 }
 .nav{
 padding-left: 4%;
@@ -284,7 +287,47 @@ transition-duration: 0.5s;
         width: 100%;
         height: 100%;
         max-width: 600px;
+        display: none;
       
+    }
+    .fourdivs{
+        width: 100vw;
+        height: 50vh;
+        background-color: chartreuse;
+        display: block;
+        margin: 0%;
+        padding: 0%;
+        display: none;
+    }
+    .smallimage1{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
+    }
+    .smallimage2{
+        width: 100vw;
+        height: 50vh;
+        max-width: 600px;
+        background-color: burlywood;
+        display: none;
+       
+    }
+    .smallimage2 img{
+        width: 100%;
+        height: 100%;
+    }
+    .smallimage3{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
+    }
+    .smallimage4{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        display: none;
     }
     .shoes .bigimage img{
         border-radius: 0%;
@@ -329,10 +372,12 @@ transition-duration: 0.5s;
         display: flex;
         flex-direction: column;
         width: 50%;
-        height: 30vh;
+        height: 32vh;
         position: fixed;
         z-index: 10;
         max-width: 150px;
+        animation-name:  fade;
+        animation-duration: 0.5s;
         
     }
     .dropdown li {
@@ -361,6 +406,105 @@ transition-duration: 0.5s;
     }
     .dropdown div{
         cursor: pointer;
+    }
+    @keyframes fade {
+        from{opacity: 0.5;}
+        to{opacity: 1;}
+    }
+    .preveous{
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.323);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    
+    .next{
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.323);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+       
+        
+    }
+
+   .animation{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+   }
+   .image1{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image2{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image3{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .image4{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .image4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+   }
+   .preveous:hover{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.69);
+    transition-duration: 0.5s;
+    }
+    .next:hover{
+        background-color: rgb(244, 244, 244, 0.69);
+        transition-duration: 0.5s;
     }
 }
  
