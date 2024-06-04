@@ -2,6 +2,45 @@ const dropdown = document.querySelector('.dropdown');
 const minus = document.querySelector('.mius');
 const plus = document.querySelector('.plus');
 const menubar = document.querySelector('.menumobile');
+const image1 = document.querySelector('.image1');
+const image2 = document.querySelector('.image2');
+const image3 = document.querySelector('.image3');
+const image4 = document.querySelector('.image4');
+ 
+let index = 0;
+let intef = 0;
+let images = [image1,image2,image3,image4];
+
+image1.style.display="block";
+image2.style.display="none";
+image3.style.display="none";
+image4.style.display="none";
+
+function next(){
+ if(index<=2){index++;} else {index=0};
+
+
+image1.style.display="none";
+image2.style.display="none";
+image3.style.display="none";
+image4.style.display="none";
+
+images[index].style.display="block";
+
+}
+function prev(){
+ if(index>0){index--;} else {index=3} ;
+
+
+image1.style.display="none";
+image2.style.display="none";
+image3.style.display="none";
+image4.style.display="none";
+
+images[index].style.display="block";
+
+}
+
 let addonemiusone = document.querySelector('.addonemiusone').innerHTML;
 console.log(addonemiusone);
 dropdown.style.display="none"
