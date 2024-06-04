@@ -304,7 +304,7 @@ transition-duration: 0.5s;
     }
     .descripitions .secounfd{
         text-align: center;
-        
+      
     }
     .descripitions .upper{
         text-align: center;
@@ -329,7 +329,7 @@ transition-duration: 0.5s;
         display: flex;
         flex-direction: column;
         width: 50%;
-        height: 25vh;
+        height: 30vh;
         position: fixed;
         z-index: 10;
         max-width: 150px;
@@ -338,7 +338,10 @@ transition-duration: 0.5s;
     .dropdown li {
         margin: auto;
         margin-top: 10%;
-      margin-block-end: auto;
+        margin-block-end: auto;
+        display: flex;
+        flex-direction: column;
+       
 
     }
     .dropdown ul {
@@ -346,6 +349,7 @@ transition-duration: 0.5s;
         text-align: center;
         font-size: var(--fs-300);
         font-weight: 500;
+         margin-bottom: 10%;
         color: var(--Black);
         border-radius: 5%;
       
